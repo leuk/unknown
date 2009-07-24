@@ -1,0 +1,29 @@
+<% title "Arbitres" %>
+
+<table>
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Birthdate</th>
+    <th>Adress</th>
+    <th>Cell Phone</th>
+    <th>Home Phone</th>
+    <th>Email</th>
+  </tr>
+  <% for arbitre in @arbitres %>
+    <tr>
+      <td><%=h arbitre.firstname %></td>
+      <td><%=h arbitre.lastname %></td>
+      <td><%=h arbitre.birthdate %></td>
+      <td><%=h arbitre.adress %></td>
+      <td><%=h arbitre.cell_phone %></td>
+      <td><%=h arbitre.home_phone %></td>
+      <td><%=h arbitre.email %></td>
+      <td><%= link_to "Show", arbitre %></td>
+      <td><%= link_to "Edit", edit_arbitre_path(arbitre) %></td>
+      <td><%= link_to "Destroy", arbitre, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Arbitre", new_arbitre_path %></p>

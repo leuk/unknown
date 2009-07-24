@@ -1,0 +1,27 @@
+<% title "Arenes" %>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Content</th>
+    <th>Keywords</th>
+    <th>Meta</th>
+    <th>Capacity</th>
+    <th>Location</th>
+  </tr>
+  <% for arene in @arenes %>
+    <tr>
+      <td><%=h arene.title %></td>
+      <td><%=h arene.content %></td>
+      <td><%=h arene.keywords %></td>
+      <td><%=h arene.meta %></td>
+      <td><%=h arene.capacity %></td>
+      <td><%=h arene.location %></td>
+      <td><%= link_to "Show", arene %></td>
+      <td><%= link_to "Edit", edit_arene_path(arene) %></td>
+      <td><%= link_to "Destroy", arene, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Arene", new_arene_path %></p>

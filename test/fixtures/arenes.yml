@@ -1,0 +1,15 @@
+one:
+  title: MyString
+  content: MyText
+  keywords: MyString
+  meta: MyString
+  capacity: 1
+  location: MyString
+
+two:
+  title: MyString
+  content: MyText
+  keywords: MyString
+  meta: MyString
+  capacity: 1
+  location: MyString

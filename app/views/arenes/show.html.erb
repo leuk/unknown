@@ -1,0 +1,32 @@
+<% title "Arene" %>
+
+<p>
+  <strong>Title:</strong>
+  <%=h @arene.title %>
+</p>
+<p>
+  <strong>Content:</strong>
+  <%=h @arene.content %>
+</p>
+<p>
+  <strong>Keywords:</strong>
+  <%=h @arene.keywords %>
+</p>
+<p>
+  <strong>Meta:</strong>
+  <%=h @arene.meta %>
+</p>
+<p>
+  <strong>Capacity:</strong>
+  <%=h @arene.capacity %>
+</p>
+<p>
+  <strong>Location:</strong>
+  <%=h @arene.location %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_arene_path(@arene) %> |
+  <%= link_to "Destroy", @arene, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", arenes_path %>
+</p>

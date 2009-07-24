@@ -1,0 +1,36 @@
+<% title "Arbitre" %>
+
+<p>
+  <strong>Firstname:</strong>
+  <%=h @arbitre.firstname %>
+</p>
+<p>
+  <strong>Lastname:</strong>
+  <%=h @arbitre.lastname %>
+</p>
+<p>
+  <strong>Birthdate:</strong>
+  <%=h @arbitre.birthdate %>
+</p>
+<p>
+  <strong>Adress:</strong>
+  <%=h @arbitre.adress %>
+</p>
+<p>
+  <strong>Cell Phone:</strong>
+  <%=h @arbitre.cell_phone %>
+</p>
+<p>
+  <strong>Home Phone:</strong>
+  <%=h @arbitre.home_phone %>
+</p>
+<p>
+  <strong>Email:</strong>
+  <%=h @arbitre.email %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_arbitre_path(@arbitre) %> |
+  <%= link_to "Destroy", @arbitre, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", arbitres_path %>
+</p>

@@ -1,0 +1,17 @@
+one:
+  firstname: MyString
+  lastname: MyString
+  birthdate: MyString
+  adress: MyString
+  cell_phone: 1
+  home_phone: 1
+  email: MyString
+
+two:
+  firstname: MyString
+  lastname: MyString
+  birthdate: MyString
+  adress: MyString
+  cell_phone: 1
+  home_phone: 1
+  email: MyString
