@@ -1,6 +1,7 @@
 class ArbitresController < ApplicationController
   def index
     @arbitres = Arbitre.all
+    format.js { render_to_facebox }
   end
   
   def show

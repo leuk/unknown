@@ -1,32 +1,36 @@
-<% form_for @arbitre do |f| %>
+<% form_for @arbitre, :html => { :multipart => true } do |f| %>
   <%= f.error_messages %>
   <p>
-    <%= f.label :firstname %><br />
+    <%= f.label :Prénom %><br />
     <%= f.text_field :firstname %>
   </p>
   <p>
-    <%= f.label :lastname %><br />
+    <%= f.label :Nom %><br />
     <%= f.text_field :lastname %>
   </p>
   <p>
-    <%= f.label :birthdate %><br />
+    <%= f.label :Photo %><br />
+    <%= f.file_field :photo %>
+  </p>
+  <p>
+    <%= f.label :Date_de_naissance %><br />
     <%= f.text_field :birthdate %>
   </p>
   <p>
-    <%= f.label :adress %><br />
+    <%= f.label :Adresse %><br />
     <%= f.text_field :adress %>
   </p>
   <p>
-    <%= f.label :cell_phone %><br />
+    <%= f.label :Téléphone_Cellulaire %><br />
     <%= f.text_field :cell_phone %>
   </p>
   <p>
-    <%= f.label :home_phone %><br />
+    <%= f.label :Téléphone_domicile %><br />
     <%= f.text_field :home_phone %>
   </p>
   <p>
-    <%= f.label :email %><br />
+    <%= f.label :Email %><br />
     <%= f.text_field :email %>
   </p>
-  <p><%= f.submit "Submit" %></p>
+  <p><%= f.submit "Enregistrer" %></p>
 <% end %>
