@@ -1,0 +1,16 @@
+<% title "Combat Type" %>
+
+<p>
+  <strong>Title:</strong>
+  <%=h @combat_type.title %>
+</p>
+<p>
+  <strong>Nullify:</strong>
+  <%=h @combat_type.nullify %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_combat_type_path(@combat_type) %> |
+  <%= link_to "Destroy", @combat_type, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", combat_types_path %>
+</p>

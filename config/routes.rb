@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :combat_types
+
  
 
   map.login  "login"   , :controller => "user_sessions" , :action => "new"

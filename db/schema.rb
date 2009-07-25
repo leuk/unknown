@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090725063620) do
+ActiveRecord::Schema.define(:version => 20090725134119) do
 
   create_table "arbitres", :force => true do |t|
     t.string   "firstname"
@@ -38,6 +38,17 @@ ActiveRecord::Schema.define(:version => 20090725063620) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.date     "build_date"
+    t.string   "snapshot_file_name"
+    t.string   "snapshot_content_type"
+    t.integer  "snapshot_file_size"
+    t.datetime "snapshot_updated_at"
+  end
+
+  create_table "combat_types", :force => true do |t|
+    t.string   "title"
+    t.boolean  "nullify"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "tiny_mce_photos", :force => true do |t|

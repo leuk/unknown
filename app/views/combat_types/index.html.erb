@@ -1,0 +1,19 @@
+<% title "Combat Types" %>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Nullify</th>
+  </tr>
+  <% for combat_type in @combat_types %>
+    <tr>
+      <td><%=h combat_type.title %></td>
+      <td><%=h combat_type.nullify %></td>
+      <td><%= link_to "Show", combat_type %></td>
+      <td><%= link_to "Edit", edit_combat_type_path(combat_type) %></td>
+      <td><%= link_to "Destroy", combat_type, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Combat Type", new_combat_type_path %></p>

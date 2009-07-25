@@ -1,0 +1,2 @@
+module CombatTypesHelper
+end

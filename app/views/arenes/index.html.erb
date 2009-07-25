@@ -1,15 +1,13 @@
-<% title "Arenes" %>
+<% title "Arénes Nationales" %>
 
 <table>
   <tr>
     <th>Title</th>
-    <th>Content</th>
     <th>Capacity</th>
   </tr>
   <% for arene in @arenes %>
     <tr>
       <td><%=h arene.title %></td>
-      <td><%= arene.content %></td>
       <td><%= link_to "Show", arene %></td>
       <td><%= link_to "Edit", edit_arene_path(arene) %></td>
       <td><%= link_to "Destroy", arene, :confirm => 'Are you sure?', :method => :delete %></td>
@@ -17,4 +15,4 @@
   <% end %>
 </table>
 
-<p><%= link_to "New Arene", new_arene_path %></p>
+<p><%= link_to "Ajouter Une Aréne", new_arene_path %></p>

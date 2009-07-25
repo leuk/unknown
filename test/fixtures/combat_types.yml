@@ -1,0 +1,7 @@
+one:
+  title: MyString
+  nullify: false
+
+two:
+  title: MyString
+  nullify: false

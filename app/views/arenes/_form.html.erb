@@ -1,43 +1,39 @@
-<% form_for @arene do |f| %>
+<% form_for @arene , :html => { :multipart => true } do |f| %>
   <%= f.error_messages %>
-	<div style = "float:left"> 
-	 	<fieldset>
-	 	  		<legend> Description et titre de l'aréne</legend>
-	 		  	<p>
-	 		      <%= f.label :Titre_Aréne %><br />
-	 		      <%= f.text_field :title %>
-	 		    </p>
-	 		    <p>
-	 		      <%= f.label :Decription_Aréne %><br />
-	 		      <%= f.text_area :content , :class => 'mceEditor' %>
-	 		    </p>
-	 	  </fieldset>	 	  
- 	</div>
-	<div style = "float:right">  
-		 <fieldset>
-		 	<legend> Information complémentaires sur l' aréne</legend>
-		   <p>
-		     <%= f.label :Capacité_Aréne %><br />
-		     <%= f.text_field :capacity %>
-		   </p>
-		     <p>
-		     <%= f.label :Date_de_construction %><br />
-		     <%= f.text_field :build_date , :id => 'datepicker' %>
-		   </p>
-		   <p>
-		     <%= f.label :localisation_Arene %><br />
-		     <%= f.text_field :location %>
-		   </p>
-		   <p>
-		     <%= f.label :keywords %><br />
-		     <%= f.text_area :keywords , :cols => 50 , :rows => 5 , :class => 'mceNoEditor' %>
-		   </p>
-		   <p>
-		     <%= f.label :meta %><br />
-		     <%= f.text_area :meta , :cols => 50 , :rows => 5 , :class => 'mceNoEditor' %>
-		   </p>  <p><%= f.submit "Enregistrer" %></p>
-		   </fieldset>
-	  </div>
+
+<p>
+	<%= f.label :Titre_Aréne %><br />
+	<%= f.text_field :title %>
+</p>
+<p>
+    <%= f.label :Snapshot %><br />
+    <%= f.file_field :snapshot %>
+</p>
+<p>
+  <%= f.label :Decription_Aréne %><br />
+  <%= f.text_area :content , :class => 'mceEditor' %>
+</p>
+<p>
+ <%= f.label :Capacité_Aréne %><br />
+ <%= f.text_field :capacity %>
+</p>
+ <p>
+ <%= f.label :Date_de_construction %><br />
+ <%= f.text_field :build_date , :id => 'datepicker' %>
+</p>
+<p>
+ <%= f.label :localisation_Arene %><br />
+ <%= f.text_field :location %>
+</p>
+<p>
+ <%= f.label :keywords %><br />
+ <%= f.text_area :keywords , :cols => 50 , :rows => 5 , :class => 'mceNoEditor' %>
+</p>
+<p>
+ <%= f.label :meta %><br />
+ <%= f.text_area :meta , :cols => 50 , :rows => 5 , :class => 'mceNoEditor' %>
+</p>  
+<p><%= f.submit "Enregistrer" %></p>
 <% end %>
 <script type="text/javascript">
 	$(function(){$('#datepicker').datepicker();});
