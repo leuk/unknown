@@ -1,1 +1,1 @@
-authlogic  --version '2.1.1' --source gems.github.com
+authlogic  --version '2.1.1' --source gems.github.com --source gems.rubyforge.org 
