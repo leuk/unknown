@@ -1,0 +1,11 @@
+one:
+  title: MyText
+  groups_count: 1
+  groups_items: 1
+  home_away: false
+
+two:
+  title: MyText
+  groups_count: 1
+  groups_items: 1
+  home_away: false

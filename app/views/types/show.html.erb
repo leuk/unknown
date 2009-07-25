@@ -1,0 +1,24 @@
+<% title "Type" %>
+
+<p>
+  <strong>Title:</strong>
+  <%=h @type.title %>
+</p>
+<p>
+  <strong>Groups Count:</strong>
+  <%=h @type.groups_count %>
+</p>
+<p>
+  <strong>Groups Items:</strong>
+  <%=h @type.groups_items %>
+</p>
+<p>
+  <strong>Home Away:</strong>
+  <%=h @type.home_away %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_type_path(@type) %> |
+  <%= link_to "Destroy", @type, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", types_path %>
+</p>

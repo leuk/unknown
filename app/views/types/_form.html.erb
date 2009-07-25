@@ -1,0 +1,20 @@
+<% form_for @type do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :groups_count %><br />
+    <%= f.text_field :groups_count %>
+  </p>
+  <p>
+    <%= f.label :groups_items %><br />
+    <%= f.text_field :groups_items %>
+  </p>
+  <p>
+    <%= f.label :home_away %><br />
+    <%= f.check_box :home_away %>
+  </p>
+  <p><%= f.submit "Enregistrer" %></p>
+<% end %>

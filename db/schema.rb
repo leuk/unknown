@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090725020352) do
+ActiveRecord::Schema.define(:version => 20090725063620) do
 
   create_table "arbitres", :force => true do |t|
     t.string   "firstname"
@@ -51,6 +51,15 @@ ActiveRecord::Schema.define(:version => 20090725020352) do
     t.string   "thumbnail"
     t.integer  "width",        :limit => 11
     t.integer  "height",       :limit => 11
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "types", :force => true do |t|
+    t.string   "title"
+    t.integer  "groups_count"
+    t.integer  "groups_items"
+    t.boolean  "home_away",    :default => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
