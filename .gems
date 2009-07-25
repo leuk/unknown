@@ -1,2 +1,2 @@
-authlogic  --version '= 2.1.0' --source gems.github.com
+authlogic  --version '= 2.1.0' --source github.com/binarylogic/authlogic/tree/master
 rails --version '= 2.3.3' --source gems.github.com
