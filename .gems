@@ -1,1 +1,2 @@
 authlogic  --version '2.1.1' --source gems.github.com --source gems.rubyforge.org 
+rails  --version '2.3.3' --source gems.github.com --source gems.rubyforge.org 
