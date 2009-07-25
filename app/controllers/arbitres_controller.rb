@@ -1,7 +1,9 @@
 class ArbitresController < ApplicationController
+	
+  uses_tiny_mce(:options => AppConfig.default_mce_options, :only => [:new, :edit])
+	
   def index
     @arbitres = Arbitre.all
-    format.js { render_to_facebox }
   end
   
   def show
@@ -24,6 +26,10 @@ class ArbitresController < ApplicationController
   
   def edit
     @arbitre = Arbitre.find(params[:id])
+    respond_to do |format|
+	 format.html
+	 format.js { render_to_facebox }
+	end
   end
   
   def update

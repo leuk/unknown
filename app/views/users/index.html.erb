@@ -1,0 +1,19 @@
+<% title "Amateurs de lutte" %>
+
+<table>
+  <tr>
+    <th>Login</th>
+    <th>Email</th>
+  </tr>
+  <% for users in @users %>
+    <tr>
+      <td><%=h users.login %></td>
+      <td><%=h users.email %></td>
+      <td><%= link_to "Show", users %></td>
+      <td><%= link_to "Edit", edit_user_path(users) %></td>
+      <td><%= link_to "Destroy", users, :confirm => 'Etes vous sur?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "Inscription", new_user_path %></p>

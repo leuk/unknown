@@ -1,4 +1,7 @@
 class ArenesController < ApplicationController
+	
+  uses_tiny_mce(:options => AppConfig.default_mce_options, :except => [:index , :destroy])
+	
   def index
     @arenes = Arene.all
   end
@@ -8,7 +11,7 @@ class ArenesController < ApplicationController
   end
   
   def new
-    @arene = Arene.new
+    @arene = Arene.new 
   end
   
   def create
@@ -31,7 +34,7 @@ class ArenesController < ApplicationController
       flash[:notice] = "Successfully updated arene."
       redirect_to @arene
     else
-      render :action => 'edit'
+      redirect_to :action => 'edit'
     end
   end
   
@@ -39,6 +42,6 @@ class ArenesController < ApplicationController
     @arene = Arene.find(params[:id])
     @arene.destroy
     flash[:notice] = "Successfully destroyed arene."
-    redirect_to arenes_url
+    redirect_to arenes_path
   end
 end

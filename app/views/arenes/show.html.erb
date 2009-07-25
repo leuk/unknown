@@ -1,12 +1,7 @@
-<% title "Arene" %>
+<% title "Aréne de lutte du stade: #{@arene.title}" %>
 
 <p>
-  <strong>Title:</strong>
-  <%=h @arene.title %>
-</p>
-<p>
-  <strong>Content:</strong>
-  <%=h @arene.content %>
+  <%= @arene.content %>
 </p>
 <p>
   <strong>Keywords:</strong>
@@ -17,16 +12,16 @@
   <%=h @arene.meta %>
 </p>
 <p>
-  <strong>Capacity:</strong>
+  <strong>Capacité de l'aréne de lutte:</strong>
   <%=h @arene.capacity %>
 </p>
 <p>
-  <strong>Location:</strong>
+  <strong>Localisation:</strong>
   <%=h @arene.location %>
 </p>
 
 <p>
-  <%= link_to "Edit", edit_arene_path(@arene) %> |
-  <%= link_to "Destroy", @arene, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", arenes_path %>
+  <%= link_to "Modifier cette Aréne de lutte", edit_arene_path(@arene) %> |
+  <%= link_to "Supprimer", @arene, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "Liste Arénes de lutte", arenes_path %>
 </p>
