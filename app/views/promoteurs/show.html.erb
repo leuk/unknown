@@ -1,0 +1,28 @@
+<% title "Promoteur" %>
+
+<p>
+  <strong>Title:</strong>
+  <%=h @promoteur.title %>
+</p>
+<p>
+  <strong>Content:</strong>
+  <%= @promoteur.content %>
+</p>
+<p>
+  <strong>Keywords:</strong>
+  <%= @promoteur.keywords %>
+</p>
+<p>
+  <strong>Meta:</strong>
+  <%= @promoteur.meta %>
+</p>
+<p>
+  <strong>Company Name:</strong>
+  <%= @promoteur.company_name %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_promoteur_path(@promoteur) %> |
+  <%= link_to "Destroy", @promoteur, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", promoteurs_path %>
+</p>

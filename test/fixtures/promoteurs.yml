@@ -1,0 +1,13 @@
+one:
+  title: MyString
+  content: MyText
+  keywords: MyString
+  meta: MyString
+  company_name: MyString
+
+two:
+  title: MyString
+  content: MyText
+  keywords: MyString
+  meta: MyString
+  company_name: MyString

@@ -1,0 +1,23 @@
+<% title "Promoteurs" %>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Content</th>
+    <th>logo</th>
+    <th>Company Name</th>
+  </tr>
+  <% for promoteur in @promoteurs %>
+    <tr>
+      <td><%=h promoteur.title %></td>
+      <td><%=  promoteur.content %></td>
+      <td><%=  image_tag promoteur.logo.url(:thumb) %></td>
+      <td><%=  promoteur.company_name %></td>
+      <td><%= link_to "Show", promoteur %></td>
+      <td><%= link_to "Edit", edit_promoteur_path(promoteur) %></td>
+      <td><%= link_to "Destroy", promoteur, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Promoteur", new_promoteur_path %></p>
