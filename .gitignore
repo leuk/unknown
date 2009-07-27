@@ -1,3 +1,7 @@
 tmp
 *.log
 public/tiny_mce_photos
+<<<<<<< HEAD:.gitignore
+=======
+public/system
+>>>>>>> seasons:.gitignore

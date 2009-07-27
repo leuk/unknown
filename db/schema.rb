@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090725134119) do
+ActiveRecord::Schema.define(:version => 20090727201959) do
 
   create_table "arbitres", :force => true do |t|
     t.string   "firstname"
@@ -49,6 +49,22 @@ ActiveRecord::Schema.define(:version => 20090725134119) do
     t.boolean  "nullify"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "seasons", :force => true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.string   "keywords"
+    t.string   "meta"
+    t.date     "start"
+    t.date     "end"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "flyer_file_name"
+    t.string   "flyer_content_type"
+    t.integer  "flyer_file_size"
+    t.datetime "flyer_updated_at"
+    t.boolean  "is_current_season"
   end
 
   create_table "tiny_mce_photos", :force => true do |t|

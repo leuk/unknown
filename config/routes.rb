@@ -1,7 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :combat_types
+	
 
- 
 
   map.login  "login"   , :controller => "user_sessions" , :action => "new"
   map.logout "logout"  , :controller => "user_sessions" , :action => "destroy"
@@ -11,7 +10,12 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :users        , :as => 'amateurs-de-lutte-senegalaise'	
   map.resources :arbitres     , :as => 'arbitres-de-lutte-senegalaise'
   map.resources :arenes       , :as => 'arenes-de-lutte-au-senegal'
+  map.resources :seasons	
+  map.resources :combat_types
   
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#    The default Route
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   map.root :controller => 'arenes'
   
   map.connect ':controller/:action/:id'

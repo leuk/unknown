@@ -1,8 +1,8 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN'
+  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
 <html>
   <head>
-    <title><%= h(yield(:title) || "Untitled") %></title>
+    <title><%= h(yield(:title) || 'Untitled') %></title>
     <%= stylesheet_link_tag 'application' , 'jquery-ui' %>
     <%= javascript_include_tag 'application' , 'jquery/jquery' , 'jquery/jquery-ui' %>
     <%= javascript_include_tiny_mce_if_used %> 
@@ -10,24 +10,25 @@
     <%= yield(:head) %>
   </head>
   <body>
-    <div id="container">
-       <div id="user_nav">
+    <div id='container'>
+       <div id='user_nav'>
         <% if current_user %>
-          <%= link_to "Mon Profil", edit_user_path(:current) %> |
-          <%= link_to "Déconnexion", logout_path %>  |
+          <%= link_to 'Mon Profil', edit_user_path(:current) %> |
+          <%= link_to 'Déconnexion', logout_path %>  |
         <% else %>
-          <%= link_to "Inscription", new_user_path %> |
-          <%= link_to "Connexion", login_path %> | 
+          <%= link_to 'Inscription', new_user_path %> |
+          <%= link_to 'Connexion', login_path %> | 
         <% end %>
-        <%= link_to "Amateurs", users_path %> | 
-        <%= link_to "Arénes", arenes_path %> | 
-        <%= link_to "Arbitres", arbitres_path %> | 
-        <%= link_to "Types", types_path %> | 
-        <%= link_to "Types Combats", combat_types_path %>
+        <%= link_to 'Amateurs', users_path %> | 
+        <%= link_to 'Arénes', arenes_path %> | 
+        <%= link_to 'Arbitres', arbitres_path %> | 
+        <%= link_to 'Types', types_path %> | 
+        <%= link_to 'Types Combats', combat_types_path %> | 
+         <%= link_to 'La Saison', seasons_path %>
       </div>	
       <br>
       <%- flash.each do |name, msg| -%>
-        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+        <%= content_tag :div, msg, :id => 'flash_#{name}' %>
       <%- end -%>
       
       <%- if show_title? -%>

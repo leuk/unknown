@@ -1,0 +1,27 @@
+<% title "Seasons" %>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Content</th>
+    <th>Keywords</th>
+    <th>Start</th>
+    <th>End</th>
+    <th>Is Current Season</th>
+  </tr>
+  <% for season in @seasons %>
+    <tr>
+      <td><%=h season.title %></td>
+      <td><%= season.content %></td>
+      <td><%= image_tag season.flyer.url(:thumb) %></td>
+      <td><%=h season.start %></td>
+      <td><%=h season.end %></td>
+      <td><%=h season.is_current_season %></td>
+      <td><%= link_to "Show", season %></td>
+      <td><%= link_to "Edit", edit_season_path(season) %></td>
+      <td><%= link_to "Destroy", season, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Season", new_season_path %></p>

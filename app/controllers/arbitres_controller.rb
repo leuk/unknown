@@ -1,6 +1,6 @@
 class ArbitresController < ApplicationController
 	
-  uses_tiny_mce(:options => AppConfig.default_mce_options, :only => [:new, :edit])
+  uses_tiny_mce(:options => AppConfig.advanced_mce_options , :except => [:index, :show , :destroy])
 	
   def index
     @arbitres = Arbitre.all

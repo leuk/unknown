@@ -1,0 +1,36 @@
+<% title "Season" %>
+
+<p>
+  <strong>Title:</strong>
+  <%=h @season.title %>
+</p>
+<p>
+  <strong>Content:</strong>
+  <%=h @season.content %>
+</p>
+<p>
+  <strong>Keywords:</strong>
+  <%=h @season.keywords %>
+</p>
+<p>
+  <strong>Meta:</strong>
+  <%=h @season.meta %>
+</p>
+<p>
+  <strong>Start:</strong>
+  <%=h @season.start %>
+</p>
+<p>
+  <strong>End:</strong>
+  <%=h @season.end %>
+</p>
+<p>
+  <strong>Is Current Season:</strong>
+  <%=h @season.is_current_season %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_season_path(@season) %> |
+  <%= link_to "Destroy", @season, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", seasons_path %>
+</p>
