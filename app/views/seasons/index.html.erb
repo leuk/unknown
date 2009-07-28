@@ -1,5 +1,5 @@
 <% title "Seasons" %>
-
+<%- if @sesaon -%>
 <table>
   <tr>
     <th>Title</th>
@@ -20,7 +20,6 @@
       <td><%= link_to "Edit", edit_season_path(@season) %></td>
       <td><%= link_to "Destroy", @season, :confirm => 'Are you sure?', :method => :delete %></td>
     </tr>
-
 </table>
-
+<%- end -%>
 <p><%= link_to "New Season", new_season_path %></p>
