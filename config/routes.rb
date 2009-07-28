@@ -1,5 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :promoteurs
+
+
 
 	
 
@@ -12,7 +13,10 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :users        , :as => 'amateurs-de-lutte-senegalaise'	
   map.resources :arbitres     , :as => 'arbitres-de-lutte-senegalaise'
   map.resources :arenes       , :as => 'arenes-de-lutte-au-senegal'
-  map.resources :seasons	
+  map.resources :promoteurs
+  map.resources :seasons do |season|
+  	season.resources :tournois , :shallow => false
+  end
   map.resources :combat_types
   
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

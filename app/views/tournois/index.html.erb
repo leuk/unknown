@@ -1,0 +1,28 @@
+<% title "Tournois" %>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Name</th>
+    <th>Content</th>
+    <th>Keywords</th>
+    <th>Meta</th>
+    <th>Start</th>
+    <th>End</th>
+    <th>Website</th>
+  </tr>
+  <% for tournoi in @tournois %>
+    <tr>
+      <td><%=h tournoi.title %></td>
+      <td><%=h tournoi.name %></td>
+      <td><%=h tournoi.start %></td>
+      <td><%=h tournoi.end %></td>
+      <td><%=h tournoi.website %></td>
+      <td><%= link_to "Show", season_tournoi_path(tournoi.season_id , tournoi) %></td>
+      <td><%= link_to "Edit", edit_season_tournoi_path(tournoi.season_id , tournoi) %></td>
+      <td><%= link_to "Destroy", season_tournoi_path(tournoi.season_id , tournoi), :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Tournoi", new_season_tournoi_path(params[:season_id]) %></p>

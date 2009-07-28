@@ -1,0 +1,54 @@
+<% form_for [@season , @tournoi] , :html => { :multipart => true } do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+    <p>
+    <%= f.label :Type_Tournoi %><br />
+    <%= f.collection_select(:type_id , @types , :id , :title) %>
+  </p>
+  <p>
+    <%= f.label :Promoteur %><br />
+    <%= f.collection_select(:promoteur_id , @promoteurs , :id , :company_name) %>
+  </p>
+    <p>
+    <%= f.label :Flyer %><br />
+    <%= f.file_field :flyer %>
+</p>
+  <p>
+    <%= f.label :content %><br />
+    <%= f.text_area :content %>
+  </p>
+  <p>
+    <%= f.label :keywords %><br />
+    <%= f.text_area :keywords , :cols => 50 , :rows => 5 , :class => 'mceNoEditor'%>
+  </p>
+  <p>
+    <%= f.label :meta %><br />
+    <%= f.text_area :meta , :cols => 50 , :rows => 5 , :class => 'mceNoEditor'%>
+  </p>
+  <p>
+    <%= f.label :start %><br />
+    <%= f.text_field :start , :class => 'datepicker' %>
+  </p>
+  <p>
+    <%= f.label :end %><br />
+    <%= f.text_field :end , :class => 'datepicker' %>
+  </p>
+  <p>
+    <%= f.label :website %><br />
+    <%= f.text_field :website %>
+  </p>
+  <p><%= f.submit "Enregister" %></p>
+<% end %>
+<script type="text/javascript">
+	$(function(){
+				$('.datepicker').datepicker({changeMonth: true,changeYear: true});
+				$('.datepicker').datepicker($.datepicker.regional['fr']);
+			});
+</script>

@@ -1,0 +1,8 @@
+<% title "Edit Tournoi" %>
+
+<%= render :partial => 'form' %>
+
+<p>
+ <%= link_to "Show", season_tournoi_path(@tournoi.season_id , @tournoi) %>|
+<%= link_to "Back to List", season_tournois_path(@tournoi.season_id ) %>
+</p>

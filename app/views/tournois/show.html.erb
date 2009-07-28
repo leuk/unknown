@@ -1,0 +1,40 @@
+<% title "Tournoi" %>
+
+<p>
+  <strong>Title:</strong>
+  <%=h @tournoi.title %>
+</p>
+<p>
+  <strong>Name:</strong>
+  <%=h @tournoi.name %>
+</p>
+<p>
+  <strong>Content:</strong>
+  <%=h @tournoi.content %>
+</p>
+<p>
+  <strong>Keywords:</strong>
+  <%=h @tournoi.keywords %>
+</p>
+<p>
+  <strong>Meta:</strong>
+  <%=h @tournoi.meta %>
+</p>
+<p>
+  <strong>Start:</strong>
+  <%=h @tournoi.start %>
+</p>
+<p>
+  <strong>End:</strong>
+  <%=h @tournoi.end %>
+</p>
+<p>
+  <strong>Website:</strong>
+  <%=h @tournoi.website %>
+</p>
+
+<p>
+<%= link_to "Edit", edit_season_tournoi_path(@tournoi.season_id , @tournoi) %>
+<%= link_to "Destroy", season_tournoi_path(@tournoi.season_id , @tournoi), :confirm => 'Are you sure?', :method => :delete %>
+<%= link_to "Back to List", season_tournois_path(@tournoi.season_id ) %>
+</p>

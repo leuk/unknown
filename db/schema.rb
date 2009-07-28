@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090727220609) do
+ActiveRecord::Schema.define(:version => 20090727231622) do
 
   create_table "arbitres", :force => true do |t|
     t.string   "firstname"
@@ -99,6 +99,26 @@ ActiveRecord::Schema.define(:version => 20090727220609) do
     t.integer  "height",       :limit => 11
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "tournois", :force => true do |t|
+    t.string   "title"
+    t.string   "name"
+    t.text     "content"
+    t.string   "keywords"
+    t.string   "meta"
+    t.date     "start"
+    t.date     "end"
+    t.string   "website"
+    t.integer  "season_id"
+    t.integer  "promoteur_id"
+    t.integer  "type_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "flyer_file_name"
+    t.string   "flyer_content_type"
+    t.integer  "flyer_file_size"
+    t.datetime "flyer_updated_at"
   end
 
   create_table "types", :force => true do |t|
