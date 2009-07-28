@@ -10,7 +10,7 @@
     <th>Is Current Season</th>
   </tr>
     <tr>
-      <td><%=h @season.title %></td>
+      <td><%= @season.title %></td>
       <td><%= @season.content %></td>
       <td><%= image_tag @season.flyer.url(:thumb) %></td>
       <td><%=h @season.start %></td>
