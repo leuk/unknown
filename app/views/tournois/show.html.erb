@@ -10,7 +10,7 @@
 </p>
 <p>
   <strong>Content:</strong>
-  <%=h @tournoi.content %>
+  <%= @tournoi.content %>
 </p>
 <p>
   <strong>Keywords:</strong>
@@ -34,6 +34,7 @@
 </p>
 
 <p>
+<%= link_to "Groupes" , season_tournoi_groupes_path(@tournoi.season_id ,@tournoi) %>
 <%= link_to "Edit", edit_season_tournoi_path(@tournoi.season_id , @tournoi) %>
 <%= link_to "Destroy", season_tournoi_path(@tournoi.season_id , @tournoi), :confirm => 'Are you sure?', :method => :delete %>
 <%= link_to "Back to List", season_tournois_path(@tournoi.season_id ) %>

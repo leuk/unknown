@@ -1,10 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
 
 
-
-	
-
-
   map.login  "login"   , :controller => "user_sessions" , :action => "new"
   map.logout "logout"  , :controller => "user_sessions" , :action => "destroy"
   
@@ -14,8 +10,17 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :arbitres     , :as => 'arbitres-de-lutte-senegalaise'
   map.resources :arenes       , :as => 'arenes-de-lutte-au-senegal'
   map.resources :promoteurs
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#    Deeply Mapping Sunulamb Routes
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Some Application Controllers Are Scoped To A season  
   map.resources :seasons do |season|
-  	season.resources :tournois , :shallow => false
+  # Scoping Tournois to a defined Season  	
+  	season.resources :tournois , :shallow => false do |tournoi|
+  	# Scoping Groups under Tournois: Logic? 
+  		tournoi.resources :groupes
+  	end
   end
   map.resources :combat_types
   

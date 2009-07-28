@@ -1,0 +1,20 @@
+<% title "Groupes" %>
+
+<table>
+  <tr>
+    <th>Title</th>
+  </tr>
+  <% for groupe in @groupes %>
+    <tr>
+      <td><%=h groupe.title %></td>
+      <td><%= link_to "Show", season_tournoi_groupe_path(@season , @tournoi , groupe) %></td>
+      <td><%= link_to "Edit", edit_season_tournoi_groupe_path(@season , @tournoi , groupe) %></td>
+      <td><%= link_to "Destroy", season_tournoi_groupe_path(@season , @tournoi ,groupe), :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p>
+	<%= link_to "New Groupe", new_season_tournoi_groupe_path(@season ,@tournoi) %>
+	<%= link_to "Tournoi", season_tournoi_path(@season ,@tournoi) %>
+</p>

@@ -47,7 +47,7 @@ class TournoisController < ApplicationController
     @tournoi = Tournoi.find(params[:id])
     @tournoi.destroy
     flash[:notice] = "Successfully destroyed tournoi."
-          redirect_to season_path(@tournoi.season)
+	redirect_to season_path(@tournoi.season_id)
   end
   
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

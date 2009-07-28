@@ -1,0 +1,12 @@
+<% title "Groupe" %>
+
+<p>
+  <strong>Title:</strong>
+  <%=h @groupe.title %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_season_tournoi_groupe_path(@season , @tournoi , @groupe) %> |
+  <%= link_to "Destroy", season_tournoi_groupe_path(@season , @tournoi , @groupe), :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "Tous les groupes", season_tournoi_groupes_path(@season , @tournoi) %>
+</p>
