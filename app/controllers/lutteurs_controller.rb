@@ -1,6 +1,6 @@
 class LutteursController < ApplicationController
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#  Controller Filters
+#  Controller Filters Loaded
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~	  
   before_filter :load_ecurie , :except => [:edit , :destroy]
   before_filter :load_categories , :except => [:index, :show , :destroy]
