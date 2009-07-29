@@ -1,0 +1,36 @@
+<% title "Lutteur" %>
+
+<p>
+  <strong>Title:</strong>
+  <%=h @lutteur.title %>
+</p>
+<p>
+  <strong>Content:</strong>
+  <%= @lutteur.content %>
+</p>
+<p>
+  <strong>Birth Date:</strong>
+  <%=h @lutteur.birth_date %>
+</p>
+<p>
+  <strong>Website:</strong>
+  <%=h @lutteur.website %>
+</p>
+<p>
+  <strong>Firstname:</strong>
+  <%=h @lutteur.firstname %>
+</p>
+<p>
+  <strong>Lastname:</strong>
+  <%=h @lutteur.lastname %>
+</p>
+<p>
+  <strong>Nickname:</strong>
+  <%=h @lutteur.nickname %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_ecury_lutteur_path(@ecury , @lutteur) %> |
+  <%= link_to "Destroy", ecury_lutteur_path(@ecury , @lutteur), :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", ecury_lutteurs_path %>
+</p>

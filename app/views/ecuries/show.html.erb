@@ -1,0 +1,49 @@
+<% title "Ecury" %>
+
+<p>
+  <strong>Title:</strong>
+  <%=h @ecury.title %>
+</p>
+<p>
+  <strong>Content:</strong>
+  <%=h @ecury.content %>
+</p>
+<p>
+  <strong>Keywords:</strong>
+  <%=h @ecury.keywords %>
+</p>
+<p>
+  <strong>Meta:</strong>
+  <%=h @ecury.meta %>
+</p>
+<p>
+  <strong>Website:</strong>
+  <%=h @ecury.website %>
+</p>
+<p>
+  <strong>Phone:</strong>
+  <%=h @ecury.phone %>
+</p>
+<p>
+  <strong>Email:</strong>
+  <%=h @ecury.email %>
+</p>
+<p>
+  <strong>Adress:</strong>
+  <%=h @ecury.adress %>
+</p>
+<p>
+  <strong>Slogan:</strong>
+  <%=h @ecury.slogan %>
+</p>
+<p>
+  <strong>Created Date:</strong>
+  <%=h @ecury.created_date %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_ecury_path(@ecury) %> |
+  <%= link_to "Destroy", @ecury, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", ecuries_path %>  
+  <%= link_to 'Lutteurs' , ecury_lutteurs_path(@ecury) %>
+</p>

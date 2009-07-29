@@ -1,0 +1,16 @@
+<% form_for @categorie_lutteur do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :min_weight %><br />
+    <%= f.text_field :min_weight %>
+  </p>
+  <p>
+    <%= f.label :max_weight %><br />
+    <%= f.text_field :max_weight %>
+  </p>
+  <p><%= f.submit "Submit" %></p>
+<% end %>

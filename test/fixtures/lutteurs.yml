@@ -1,0 +1,21 @@
+one:
+  title: MyString
+  content: MyText
+  keywords: MyString
+  meta: MyString
+  birth_date: 2009-07-28
+  website: MyString
+  firstname: MyString
+  lastname: MyString
+  nickname: MyString
+
+two:
+  title: MyString
+  content: MyText
+  keywords: MyString
+  meta: MyString
+  birth_date: 2009-07-28
+  website: MyString
+  firstname: MyString
+  lastname: MyString
+  nickname: MyString

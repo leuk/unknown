@@ -1,0 +1,29 @@
+<% title "Ecuries" %>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Website</th>
+    <th>Phone</th>
+    <th>Email</th>
+    <th>Adress</th>
+    <th>Slogan</th>
+    <th>Created Date</th>
+  </tr>
+  <% for ecury in @ecuries %>
+    <tr>
+      <td><%=h ecury.title %></td>
+      <td><%=h ecury.website %></td>
+      <td><%=h ecury.phone %></td>
+      <td><%=h ecury.email %></td>
+      <td><%=h ecury.adress %></td>
+      <td><%=h ecury.slogan %></td>
+      <td><%=h ecury.created_date %></td>
+      <td><%= link_to "Show", ecury %></td>
+      <td><%= link_to "Edit", edit_ecury_path(ecury) %></td>
+      <td><%= link_to "Destroy", ecury, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Ecury", new_ecury_path %></p>

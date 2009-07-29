@@ -26,7 +26,7 @@
   </p>
   <p>
     <%= f.label :end %><br />
-    <%= f.text_field :end , :class => 'datepicker'%>
+    <%= f.text_field :end , :class => 'datepicker' %>
   </p>
   <p>
     <%= f.label :is_current_season %><br />
@@ -36,9 +36,8 @@
 <% end %>
 <script type="text/javascript">
 	$(function(){
-				$('.datepicker').datepicker({changeMonth: true,changeYear: true});
-				$('.datepicker').datepicker($.datepicker.regional['fr']);
-			});
+					$('.datepicker').datepicker({changeMonth: true,changeYear: true});
+					$('.datepicker').datepicker($.datepicker.regional['fr']);});
 </script>
 
 

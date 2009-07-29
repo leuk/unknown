@@ -1,25 +1,17 @@
-<% form_for [@season , @tournoi] , :html => { :multipart => true } do |f| %>
+<% form_for [@ecury , @lutteur] , :html => {:multipart => true} do |f| %>
   <%= f.error_messages %>
   <p>
     <%= f.label :title %><br />
     <%= f.text_field :title %>
   </p>
-  <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </p>
     <p>
-    <%= f.label :Type_Tournoi %><br />
-    <%= f.collection_select(:type_id , @types , :id , :title) %>
+    <%= f.label :Avatar_Lutteur %><br />
+    <%= f.file_field :lutteur_avatar %>
   </p>
   <p>
-    <%= f.label :Promoteur %><br />
-    <%= f.collection_select(:promoteur_id , @promoteurs , :id , :company_name) %>
+    <%= f.label :category_lutteur_id %><br />
+    <%= f.collection_select(:category_lutteur_id , @categorie_lutteurs , :id , :title) %>
   </p>
-    <p>
-    <%= f.label :Flyer %><br />
-    <%= f.file_field :flyer %>
-</p>
   <p>
     <%= f.label :content %><br />
     <%= f.text_area :content %>
@@ -33,18 +25,26 @@
     <%= f.text_area :meta , :cols => 50 , :rows => 5 , :class => 'mceNoEditor' %>
   </p>
   <p>
-    <%= f.label :start %><br />
-    <%= f.text_field :start , :class => 'datepicker' %>
-  </p>
-  <p>
-    <%= f.label :end %><br />
-    <%= f.text_field :end , :class => 'datepicker' %>
+    <%= f.label :birth_date %><br />
+    <%= f.text_field :birth_date , :class => 'datepicker' %>
   </p>
   <p>
     <%= f.label :website %><br />
     <%= f.text_field :website %>
   </p>
-  <p><%= f.submit "Enregister" %></p>
+  <p>
+    <%= f.label :firstname %><br />
+    <%= f.text_field :firstname %>
+  </p>
+  <p>
+    <%= f.label :lastname %><br />
+    <%= f.text_field :lastname %>
+  </p>
+  <p>
+    <%= f.label :nickname %><br />
+    <%= f.text_field :nickname %>
+  </p>
+  <p><%= f.submit "Enregistrer" %></p>
 <% end %>
 <script type="text/javascript">
 	$(function(){

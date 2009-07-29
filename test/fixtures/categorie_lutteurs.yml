@@ -1,0 +1,9 @@
+one:
+  title: MyString
+  min_weight: 1
+  max_weight: 1
+
+two:
+  title: MyString
+  min_weight: 1
+  max_weight: 1

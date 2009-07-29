@@ -1,0 +1,27 @@
+<% title "Lutteurs" %>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Birth Date</th>
+    <th>Website</th>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Nickname</th>
+  </tr>
+  <% for lutteur in @lutteurs %>
+    <tr>
+      <td><%=h lutteur.title %></td>
+      <td><%=h lutteur.birth_date %></td>
+      <td><%=h lutteur.website %></td>
+      <td><%=h lutteur.firstname %></td>
+      <td><%=h lutteur.lastname %></td>
+      <td><%=h lutteur.nickname %></td>
+      <td><%= link_to "Show"    , ecury_lutteur_path(@ecury , lutteur) %></td>
+      <td><%= link_to "Edit"    , edit_ecury_lutteur_path(@ecury , lutteur) %></td>
+      <td><%= link_to "Destroy" , ecury_lutteur_path(@ecury , lutteur) , :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Lutteur", new_ecury_lutteur_path(@ecury) %></p>

@@ -1,0 +1,23 @@
+one:
+  title: MyString
+  content: MyText
+  keywords: MyString
+  meta: MyString
+  website: MyString
+  phone: MyString
+  email: MyString
+  adress: MyString
+  slogan: MyString
+  created_date: 2009-07-28
+
+two:
+  title: MyString
+  content: MyText
+  keywords: MyString
+  meta: MyString
+  website: MyString
+  phone: MyString
+  email: MyString
+  adress: MyString
+  slogan: MyString
+  created_date: 2009-07-28

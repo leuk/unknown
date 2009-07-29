@@ -1,0 +1,20 @@
+<% title "Categorie Lutteur" %>
+
+<p>
+  <strong>Title:</strong>
+  <%=h @categorie_lutteur.title %>
+</p>
+<p>
+  <strong>Min Weight:</strong>
+  <%=h @categorie_lutteur.min_weight %>
+</p>
+<p>
+  <strong>Max Weight:</strong>
+  <%=h @categorie_lutteur.max_weight %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_categorie_lutteur_path(@categorie_lutteur) %> |
+  <%= link_to "Destroy", @categorie_lutteur, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", categorie_lutteurs_path %>
+</p>

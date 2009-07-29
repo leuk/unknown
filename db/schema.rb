@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090728194815) do
+ActiveRecord::Schema.define(:version => 20090728215419) do
 
   create_table "arbitres", :force => true do |t|
     t.string   "firstname"
@@ -44,11 +44,41 @@ ActiveRecord::Schema.define(:version => 20090728194815) do
     t.datetime "snapshot_updated_at"
   end
 
+  create_table "categorie_lutteurs", :force => true do |t|
+    t.string   "title"
+    t.integer  "min_weight"
+    t.integer  "max_weight"
+    t.integer  "lutteurs_count"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "combat_types", :force => true do |t|
     t.string   "title"
     t.boolean  "nullify"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "ecuries", :force => true do |t|
+    t.string   "title"
+    t.string   "name"
+    t.text     "content"
+    t.string   "keywords"
+    t.string   "meta"
+    t.string   "website"
+    t.string   "phone"
+    t.string   "email"
+    t.string   "adress"
+    t.string   "slogan"
+    t.date     "created_date"
+    t.integer  "lutteurs_count"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "ecury_logo_file_name"
+    t.string   "ecury_logo_content_type"
+    t.integer  "ecury_logo_file_size"
+    t.datetime "ecury_logo_updated_at"
   end
 
   create_table "groupes", :force => true do |t|
@@ -60,6 +90,26 @@ ActiveRecord::Schema.define(:version => 20090728194815) do
     t.text     "content"
     t.text     "keywords"
     t.integer  "tournoi_id"
+  end
+
+  create_table "lutteurs", :force => true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.string   "keywords"
+    t.string   "meta"
+    t.date     "birth_date"
+    t.string   "website"
+    t.string   "firstname"
+    t.string   "lastname"
+    t.string   "nickname"
+    t.integer  "ecury_id"
+    t.integer  "category_lutteur_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "lutteur_avatar_file_name"
+    t.string   "lutteur_avatar_content_type"
+    t.integer  "lutteur_avatar_file_size"
+    t.datetime "lutteur_avatar_updated_at"
   end
 
   create_table "promoteurs", :force => true do |t|
