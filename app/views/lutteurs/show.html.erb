@@ -32,5 +32,5 @@
 <p>
   <%= link_to "Edit", edit_ecury_lutteur_path(@ecury , @lutteur) %> |
   <%= link_to "Destroy", ecury_lutteur_path(@ecury , @lutteur), :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", ecury_lutteurs_path %>
+  <%= link_to "Lutteurs: #{@ecury.name}" , ecury_path(@ecury) %>
 </p>

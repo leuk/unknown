@@ -1,45 +1,38 @@
-<% title "Ecury" %>
+<% title "Ecurie: #{@ecury.name}" %>
+<script type="text/javascript">
+	$(function() {$("#tabs").tabs();});
+</script>
 
-<p>
-  <strong>Title:</strong>
-  <%=h @ecury.title %>
-</p>
-<p>
-  <strong>Content:</strong>
-  <%=h @ecury.content %>
-</p>
-<p>
-  <strong>Keywords:</strong>
-  <%=h @ecury.keywords %>
-</p>
-<p>
-  <strong>Meta:</strong>
-  <%=h @ecury.meta %>
-</p>
-<p>
-  <strong>Website:</strong>
-  <%=h @ecury.website %>
-</p>
-<p>
-  <strong>Phone:</strong>
-  <%=h @ecury.phone %>
-</p>
-<p>
-  <strong>Email:</strong>
-  <%=h @ecury.email %>
-</p>
-<p>
-  <strong>Adress:</strong>
-  <%=h @ecury.adress %>
-</p>
-<p>
-  <strong>Slogan:</strong>
-  <%=h @ecury.slogan %>
-</p>
-<p>
-  <strong>Created Date:</strong>
-  <%=h @ecury.created_date %>
-</p>
+
+
+<div class="demo">
+
+<div id="tabs">
+	<ul>
+		<li><a href="#tabs-1">Ecurie <%= @ecury.name %></a></li>
+		<li><a href="#tabs-2">Lutteurs Ecurie <%= @ecury.name %> </a></li>
+		<li><a href="#tabs-3">Sponsors <%= @ecury.name %></a></li>
+	</ul>
+	<div id="tabs-1">
+		<p>  <strong>Nom <%= @ecury.name %>:</strong><%= @ecury.title %>	</p>
+		<p>  <strong>Content:</strong><%= @ecury.content %>	</p>
+		<p>  <strong>Website:</strong><%=h @ecury.website %>	</p>
+		<p>  <strong>Phone:</strong> <%=h @ecury.phone %>	</p>
+		<p>  <strong>Email:</strong> <%=h @ecury.email %>	</p>
+		<p>  <strong>Adress:</strong>  <%=h @ecury.adress %>		</p>
+		<p>  <strong>Slogan:</strong>  <%=h @ecury.slogan %>	</p>
+		<p>  <strong>Created Date:</strong>  <%=h @ecury.created_date %>		</p>
+	</div>
+	<div id="tabs-2">
+		<%= render :partial => 'lutteurs/lutteurs' %>
+	</div>
+	<div id="tabs-3">
+		
+	</div>
+</div>
+
+</div
+
 
 <p>
   <%= link_to "Edit", edit_ecury_path(@ecury) %> |

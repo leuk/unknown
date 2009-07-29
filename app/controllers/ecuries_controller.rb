@@ -8,6 +8,7 @@ class EcuriesController < ApplicationController
   
   def show
     @ecury = Ecury.find(params[:id])
+    @lutteurs = @ecury.lutteurs
   end
   
   def new

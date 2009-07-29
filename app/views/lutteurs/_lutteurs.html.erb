@@ -1,0 +1,3 @@
+<%- @lutteurs.each do |lutteur| -%>
+	<%= link_to lutteur.nickname  , ecury_lutteur_path(@ecury , lutteur) %><br>
+<%- end -%>
