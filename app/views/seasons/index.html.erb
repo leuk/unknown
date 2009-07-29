@@ -1,25 +1,25 @@
-<% title "Seasons" %>
-<%- if @sesaon -%>
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Content</th>
-    <th>Keywords</th>
-    <th>Start</th>
-    <th>End</th>
-    <th>Is Current Season</th>
-  </tr>
-    <tr>
-      <td><%= @season.title %></td>
-      <td><%= @season.content %></td>
-      <td><%= image_tag @season.flyer.url(:thumb) %></td>
-      <td><%=h @season.start %></td>
-      <td><%=h @season.end %></td>
-      <td><%=h @season.is_current_season %></td>
-      <td><%= link_to "Show", @season %></td>
-      <td><%= link_to "Edit", edit_season_path(@season) %></td>
-      <td><%= link_to "Destroy", @season, :confirm => 'Are you sure?', :method => :delete %></td>
-    </tr>
-</table>
-<%- end -%>
-<p><%= link_to "New Season", new_season_path %></p>
+<% title "Saison de lutte #{@season.title}" %>
+
+<div class="demo">
+<div id="tabs">
+	<ul>
+		<li><a href="#tabs-1">Saison <%= @season.title %></a></li>
+		<li><a href="#tabs-2">Tournois Saison <%= @season.title %> </a></li>
+		<li><a href="#tabs-3">Sponsors Saison<%= @season.title %></a></li>
+	</ul>
+	<div id="tabs-1">
+		<p>  <strong>Titre: </strong><%= @season.title %>	</p>
+		<p>  <strong>Description: </strong><%= @season.content %>	</p>
+		<p>  <strong>Début: </strong> <%=h @season.start %>	</p>
+		<p>  <strong>Fin: </strong> <%=h @season.end %>	</p>
+	</div>
+	<div id="tabs-2">
+	</div>
+	<div id="tabs-3">		
+	</div>
+</div>
+</div>
+<p><%= link_to "Nouvelle Saison", new_season_path %></p>
+<script type="text/javascript">
+	$(function() {$("#tabs").tabs();});
+</script>

@@ -16,8 +16,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :arbitres     , :as => 'arbitres-de-lutte-senegalaise'
   map.resources :arenes       , :as => 'arenes-de-lutte-au-senegal'
   map.resources :promoteurs   , :as => 'promoteurs-de-lutte-senegalaise'
-  map.resources :combat_types
-  map.resources :categorie_lutteurs
+  map.resources :combat_types , :as => 'types-de-combats-de-lutte'
+  map.resources :categorie_lutteurs , :as => 'categories-de-lutteurs'
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #    Deeply Mapping Sunulamb Routes
@@ -41,10 +41,13 @@ ActionController::Routing::Routes.draw do |map|
   
   
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#    The default Route
+#    The Root Route Of This Application
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   map.root :controller => 'arenes'
-  
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#  Mapping Default Routes
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
   

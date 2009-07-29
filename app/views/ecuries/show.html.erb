@@ -1,12 +1,5 @@
 <% title "Ecurie: #{@ecury.name}" %>
-<script type="text/javascript">
-	$(function() {$("#tabs").tabs();});
-</script>
-
-
-
 <div class="demo">
-
 <div id="tabs">
 	<ul>
 		<li><a href="#tabs-1">Ecurie <%= @ecury.name %></a></li>
@@ -26,12 +19,10 @@
 	<div id="tabs-2">
 		<%= render :partial => 'lutteurs/lutteurs' %>
 	</div>
-	<div id="tabs-3">
-		
+	<div id="tabs-3">		
 	</div>
 </div>
-
-</div
+</div>
 
 
 <p>
@@ -40,3 +31,6 @@
   <%= link_to "View All", ecuries_path %>  
   <%= link_to 'Lutteurs' , ecury_lutteurs_path(@ecury) %>
 </p>
+<script type="text/javascript">
+	$(function() {$("#tabs").tabs();});
+</script>

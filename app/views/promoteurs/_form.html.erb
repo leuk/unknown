@@ -1,44 +1,29 @@
 <% form_for @promoteur , :html => { :multipart => true } do |f| %>
   <%= f.error_messages %>
-  <p>
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </p>
-  <p>
-    <%= f.label :logo %><br />
-    <%= f.file_field :logo %>
-  </p>
-  <p>
-    <%= f.label :content %><br />
-    <%= f.text_area :content , :class => 'mceEditor' %>
-  </p>
-  <p>
-    <%= f.label :keywords %><br />
-    <%= f.text_area :keywords , :cols => 50 , :rows => 5 , :class => 'mceNoEditor' %>
-  </p>
-  <p>
-    <%= f.label :meta %><br />
-    <%= f.text_area :meta , :cols => 50 , :rows => 5 , :class => 'mceNoEditor' %>
-  </p>
-  <p>
-    <%= f.label :company_name %><br />
-    <%= f.text_field :company_name %>
-  </p>
-    <p>
-    <%= f.label :website %><br />
-    <%= f.text_field :website %>
-  </p>
-    <p>
-    <%= f.label :phone %><br />
-    <%= f.text_field :phone %>
-  </p>
-    <p>
-    <%= f.label :fax %><br />
-    <%= f.text_field :fax %>
-  </p>
-    <p>
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </p>
-  <p><%= f.submit "Enregistrer" %></p>
+  <div id = 'tabs' >
+  		<ul>
+  			<li><a  href = '#tabs-1'>Description Aréne</a></li>
+  			<li><a  href = '#tabs-2'>Référencement</a></li>
+  			<li><a  href = '#tabs-3'>Contacts</a></li>
+  		</ul>
+  		<div id = 'tabs-1' >	  
+		  <p><%= f.label :title %><br /><%= f.text_field :title %></p>  
+		  <p><%= f.label :company_name %><br /><%= f.text_field :company_name %></p>
+		  <p><%= f.label :logo %><br /><%= f.file_field :logo %></p>
+		  <p><%= f.label :content %><br /><%= f.text_area :content , :class => 'mceEditor' %></p>
+  		</div>
+  		<div id = 'tabs-2'>
+		  <p><%= f.label :keywords %><br /><%= f.text_area :keywords , :cols => 50 , :rows => 5 , :class => 'mceNoEditor' %></p>
+		  <p><%= f.label :meta %><br /><%= f.text_area :meta , :cols => 50 , :rows => 5 , :class => 'mceNoEditor' %></p>
+  		</div>
+  		<div id = 'tabs-3'>
+		  <p><%= f.label :website %><br /><%= f.text_field :website %></p>
+		  <p><%= f.label :phone %><br /><%= f.text_field :phone %></p>
+		  <p><%= f.label :fax %><br /><%= f.text_field :fax %> </p>
+		  <p><%= f.label :email %><br /><%= f.text_field :email %></p>
+		  <p><%= f.submit "Enregistrer" %></p>
+  		</div>
 <% end %>
+<script type="text/javascript">
+	$(function() {$("#tabs").tabs();});
+</script>

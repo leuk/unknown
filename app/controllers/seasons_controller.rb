@@ -8,7 +8,6 @@ class SeasonsController < ApplicationController
   uses_tiny_mce(:options => AppConfig.advanced_mce_options , :except => [:index, :show , :destroy])
   
   def index
-    #@seasons = Season.all
   end
   
   def show
@@ -55,7 +54,7 @@ class SeasonsController < ApplicationController
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~	  
 	private
 		def set_current_season
-			@seasons = Season.all			
+			#@seasons = Season.all			
 			@season = Season.find_by_is_current_season(true)
 		end
 end
